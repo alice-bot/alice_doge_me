@@ -18,7 +18,8 @@ defmodule AliceDogeMe.Mixfile do
 
   defp deps do
     [
-      {:alice, "~> 0.3"}
+      {:alice, "~> 0.3"},
+      {:ex_doc, ">= 0.0.0", only: :dev}
     ]
   end
 
