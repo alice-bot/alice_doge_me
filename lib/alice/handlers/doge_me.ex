@@ -24,7 +24,7 @@ defmodule Alice.Handlers.Dogeme do
   end
 
   defp create_doge_url(phrases) do
-    url_phrases = 
+    url_phrases =
       phrases
       |> encode_phrases()
       |> Enum.join("/")
@@ -32,9 +32,9 @@ defmodule Alice.Handlers.Dogeme do
   end
 
   defp encode_phrases(phrases) do
-    Enum.map(phrases, fn(phrase) -> 
-      phrase 
-      |> String.trim() 
+    Enum.map(phrases, fn(phrase) ->
+      phrase
+      |> String.strip()
       |> URI.encode()
     end)
   end
