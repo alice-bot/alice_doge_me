@@ -7,6 +7,7 @@ defmodule AliceDogeMe.Mixfile do
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
+     description: description,
      package: package,
      deps: deps]
   end
@@ -20,6 +21,12 @@ defmodule AliceDogeMe.Mixfile do
       {:websocket_client, github: "jeremyong/websocket_client"},
       {:alice, "~> 0.3"}
     ]
+  end
+
+  defp description do
+    """
+    This handler will allow Alice to create Doge images with user input.
+    """
   end
 
   defp package do
